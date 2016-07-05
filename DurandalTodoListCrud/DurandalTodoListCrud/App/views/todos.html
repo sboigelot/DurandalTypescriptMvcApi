@@ -1,0 +1,26 @@
+﻿
+<div data-bind="foreach : todos.items">
+    <b>Title:</b> <span data-bind="text : title"></span><input type="text" data-bind="value: title" />
+    <br />
+    <b>Priority:</b><span data-bind="text: priority"></span>
+    <br />
+    <b>Description:</b><span data-bind="text: description"></span>
+    <br />
+    <b>Due Date:</b><span data-bind="text: dueDate"></span>
+    <br />
+    <input type="button" value="Delete" data-bind="click: $parent.remove" />
+    <hr>
+</div>
+
+<hr/>
+<b>New Todo</b>
+<br />
+Title: <input type="text" data-bind="value: editable.title" />
+Priority: <input type="number" data-bind="value: editable.priority" />
+Description: <input type="text" data-bind="value: editable.description" />
+Due Date: <input type="date" data-bind="value: editable.dueDate" />
+<input type="button" value="Save" data-bind="click: addEditableClone" />
+
+<hr />
+<input type="button" value="Save to server" data-bind="click: save" />
+<input type="button" value="Load from server" data-bind="click: load" />

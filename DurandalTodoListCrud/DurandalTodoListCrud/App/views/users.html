@@ -1,0 +1,22 @@
+﻿
+<div data-bind="foreach : userArray">
+    <b>Name:</b> <span data-bind="text : name"></span>
+    <br />
+    <b>Surname:</b><span data-bind="text: surname"></span>
+    <br />
+    <b>Phone:</b><span data-bind=" text: phone"></span>
+    <br />
+    <b>Address:</b><span data-bind="text: address"></span>
+    <br />
+    <input type="button" value="Delete" data-bind="click: $parent.remove" />
+    <hr>
+</div>
+
+
+<b>New Record</b>
+<br />
+Name: <input type="text" data-bind="value: name" />
+Surname: <input type="text" data-bind="value: surname" />
+Phone: <input type="text" data-bind="value: phone" />
+Address: <input type="text" data-bind="value: address" />
+<input type="button" value="Save" data-bind="click: addNew" />
